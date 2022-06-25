@@ -10,7 +10,7 @@ class SmoothLife : public UpdatableFrame
     Q_OBJECT
 public:
     SmoothLife(int width, int height, QObject *parent);
-    virtual void update() override;
+    virtual void updateFrame() override;
 };
 
 #endif // SMOOTHLIFE_H

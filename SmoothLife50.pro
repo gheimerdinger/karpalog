@@ -3,6 +3,13 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+QMAKE_CXXFLAGS += -O3
+
+win32: {
+    QMAKE_CXXFLAGS_RELEASE -= -O2
+    QMAKE_CXXFLAGS_RELEASE += -O3 -march=native -fopenmp
+    QMAKE_LFLAGS_RELEASE += -fopenmp
+}
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -10,20 +17,20 @@ CONFIG += c++11
 
 SOURCES += \
     colorconverter.cpp \
-    coretest.cpp \
+    linearconverter.cpp \
     main.cpp \
     mainwindow.cpp \
-    mangoustconverter.cpp \
     smoothlife.cpp \
-    updatableframe.cpp
+    updatableframe.cpp \
+    worleybase.cpp
 
 HEADERS += \
     colorconverter.h \
-    coretest.h \
+    linearconverter.h \
     mainwindow.h \
-    mangoustconverter.h \
     smoothlife.h \
-    updatableframe.h
+    updatableframe.h \
+    worleybase.h
 
 FORMS += \
     mainwindow.ui

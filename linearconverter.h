@@ -1,18 +1,18 @@
-#ifndef MANGOUSTCONVERTER_H
-#define MANGOUSTCONVERTER_H
+#ifndef LINEARCONVERTER_H
+#define LINEARCONVERTER_H
 
 #include "colorconverter.h"
 
-class MangoustConverter : public ColorConverter
+class LinearConverter : public ColorConverter
 {
 public:
-    static MangoustConverter &converter();
+    static LinearConverter &converter();
     static float R_rate, R_offset,
                  G_rate, G_offset,
                  B_rate, B_offset;
 
 private:
-    static MangoustConverter m_converter;
+    static LinearConverter m_converter;
 
     // ColorConverter interface
 public:
@@ -24,4 +24,4 @@ public:
     void triple_to_col(uchar &r, uchar &g, uchar &b, float x, float y, float z) const;
 };
 
-#endif // MANGOUSTCONVERTER_H
+#endif // LINEARCONVERTER_H

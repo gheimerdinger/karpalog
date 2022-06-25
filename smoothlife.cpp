@@ -5,7 +5,7 @@ SmoothLife::SmoothLife(int width, int height, QObject *parent) :
 {
 }
 
-void SmoothLife::update()
+void SmoothLife::updateFrame()
 {
     m_t_update++;
 }

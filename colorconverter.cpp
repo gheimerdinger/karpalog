@@ -1,4 +1,5 @@
 #include "colorconverter.h"
+ColorConverter ColorConverter::m_color_converter;
 
 ColorConverter &ColorConverter::converter()
 {
